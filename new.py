@@ -207,20 +207,19 @@ def api_normal(m):
 # 9. METAPHOR PROMPT
 # =========================================================
 metaphor_template = """
-Generate 15 metaphorical English expressions (3–6 words) that can replace [MASK]
-in the following situation:
+Generate 15 metaphorical English expressions (3–6 words) that can replace [MASK] in the following situation:
 
-[SITUATION]
+[Situation]
 
-Expressions must:
-- sound idiomatic and natural
-- evoke atmosphere, tension, pressure, balance, or subtle social force
-- use physical metaphors (air, heat, weight, shadow, posture, light, space)
-- avoid abstract nouns (identity, ego, dignity, pride, context)
-- must NOT reference the hidden cultural concept
-- must NOT directly describe emotions
-- No explanations. Only expressions.
+Requirements:
+- Expressions must sound idiomatic and natural.
+- Use physical metaphors.
+- Avoid abstract nouns.
+- Must NOT mention the hidden concept directly.
+- Must NOT describe emotions directly.
+- No explanations. Only the expressions.
 """
+
 
 # =========================================================
 # 10. STORAGE
@@ -302,7 +301,7 @@ for name, (func, tok, model) in models.items():
 
     # 4) metaphor generation (GPT)
     metaphor_prompt = metaphor_template.replace("[SITUATION]", masked)
-    metaphors = ask_gpt(metaphor_prompt)
+    metaphors = ask(metaphor_prompt)
     metaphor_results[name] = metaphors
 
     # # 5) similarity
@@ -321,17 +320,16 @@ for m in normal_results:
         m,
         normal_results[m],
         scenario_results[m],
-        plain_results[m],
         framework_results[m],
-        round(sim_results[m] * 100, 2)
+        metaphor_results[m],
     ])
 
 df = pd.DataFrame(rows, columns=[
     "Model",
     "Normal Translation",
-    "Plain Translation",
+    "Generated Korean Scenario",
     "Framework Translation",
-    "Metaphor Similarity (%)"
+    "Metaphor"
 ])
 
 print("\n===== FINAL MULTI-MODEL FULL COMPARISON =====\n")
