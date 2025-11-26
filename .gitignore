@@ -1,0 +1,7 @@
+.env
+.venv/
+KoSentenceBERT-SKT/
+days_results/
+text_results/
+old_v1/
+old_v2/
