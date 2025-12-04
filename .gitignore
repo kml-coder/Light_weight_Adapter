@@ -1,5 +1,6 @@
 .env
 .venv/
+venv/
 KoSentenceBERT-SKT/
 days_results/*
 !days_results/.gitkeep

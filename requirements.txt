@@ -10,11 +10,9 @@ transformers
 sentencepiece
 tokenizers
 
-kobert-tokenizer
-kobert-transformers
-
 kss
 nltk
 
 openai
+python-dotenv
 huggingface-hub
