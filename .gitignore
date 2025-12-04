@@ -1,8 +1,10 @@
 .env
 .venv/
 KoSentenceBERT-SKT/
-days_results/.
-text_results/.
+days_results/*
+!days_results/.gitkeep
+text_results/*
+!text_results/.gitkeep
 old_v1/
 old_v2/
 converter.ipynb
