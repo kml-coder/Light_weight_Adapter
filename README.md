@@ -56,10 +56,10 @@ OPENAI_API_KEY=sk-xxxxxx
 
 ```
 text_source/
-    alice_eng_short.txt
-    alice_kor_short.txt
-    alice_eng_long.txt
-    alice_kor_long.txt
+    alice_eng_chapter.txt
+    alice_kor_chapter.txt
+    alice_eng_book.txt
+    alice_kor_book.txt
 
 text_results/
     (generated files)
@@ -76,7 +76,7 @@ days_results/
 
 ### 4.1 Text Processing and Embedding Extraction
 Run the Converter in 1. Converting and result Check
-* You can change the ENG_FILE_PATH and KOR_FILE_PATH to alice_long_eng.txt and alice_long_kor.txt to create long .npz data
+* You can change the ENG_FILE_PATH and KOR_FILE_PATH to alice_eng_book.txt and alice_kor_book.txt to create long .npz data
 
 After you run it, it will:
 Generates:
