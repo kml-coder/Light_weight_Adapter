@@ -112,7 +112,7 @@ days_results/day2_sentence_results_best_model.pt
 
 Run the code in 3. Test the trained Adapter
 
-It will show Quality Test Data, t-SNE visualizations, and paraphrase evaluation.
+It will show quantitative test for Top-k, t-SNE visualizations, and paraphrase evaluation.
 
 
 ## License
