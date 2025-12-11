@@ -1,6 +1,6 @@
 # Lightweight English–Korean Sentence Alignment
 
-You can find a project report from [here](https://drive.google.com/file/d/1TnItI7r46wKmeXGKZYhy3iC7MC_lB1QJ/view?usp=sharing).
+You can find a research project report from [here](https://drive.google.com/file/d/1TnItI7r46wKmeXGKZYhy3iC7MC_lB1QJ/view?usp=sharing).
 
 This repository implements a complete pipeline for aligning English and Korean sentence embeddings.  
 The system performs:
